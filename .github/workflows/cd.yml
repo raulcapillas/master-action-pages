@@ -45,4 +45,4 @@ jobs:
       - name: Build
         run: npm run build
       - name: Deploy
-        run: npm run deploy -- -r git@gitub.com:rcapillas/master-action-pages.git
+        run: npm run deploy -- -r https://github.com/raulcapillas/master-action-pages.git
