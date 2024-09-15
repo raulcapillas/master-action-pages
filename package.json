@@ -4,7 +4,8 @@
   "main": "index.jsx",
   "scripts": {
     "start": "parcel index.html --open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/raulcapillas/master-action-pages#readme",
   "description": "",
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
