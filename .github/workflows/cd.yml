@@ -3,11 +3,11 @@ name: Continuous Deployment workflow
 on:
     push:
         branches:
-        - master
+            master
 
 jobs:
     cd:
         runs-on: ubuntu-latest
         steps:
-        -   name: Checkout repository
-            uses: actions/checkout@v2
+            -   name: Checkout repository
+                uses: actions/checkout@v2
