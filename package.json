@@ -1,0 +1,27 @@
+{
+  "name": "master-action-pages",
+  "version": "1.0.0",
+  "main": "index.jsx",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raulcapillas/master-action-pages.git"
+  },
+  "author": "rcapillas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raulcapillas/master-action-pages/issues"
+  },
+  "homepage": "https://github.com/raulcapillas/master-action-pages#readme",
+  "description": "",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
