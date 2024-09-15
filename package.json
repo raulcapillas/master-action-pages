@@ -5,6 +5,8 @@
   "scripts": {
     "start": "parcel index.html --open",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && parcel build index.html",
+    "clean": "rimraf dist .parcel-cache",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
