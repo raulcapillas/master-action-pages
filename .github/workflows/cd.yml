@@ -34,8 +34,8 @@ jobs:
       - name: Use SSH key
         run: |
                 mkdir -p ~/.ssh/
-                echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa
-                sudo chmod 600 ~/.ssh/id_rsa
+                echo "${{secrets.SSH_PRIVATE_KEY}}" > /home/runner/.ssh/id_rsa
+                sudo chmod 600 /home/runner/.ssh/id_rsa
       - name: Git config
         run: |
                 git config --global user.email "raulcapillas@gmail.com"
