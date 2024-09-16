@@ -1,7 +1,7 @@
 {
   "name": "master-action-pages",
   "version": "1.0.0",
-  "main": "index.jsx",
+  "main": "index.tsx",
   "scripts": {
     "start": "vite",
     "preview": "vite preview --port 8080",
