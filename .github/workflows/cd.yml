@@ -33,9 +33,12 @@ jobs:
         uses: actions/checkout@v4
       - name: Use SSH key
         run: |
-                mkdir -p /home/runner/.ssh/
-                echo "${{secrets.SSH_PRIVATE_KEY}}" > /home/runner/.ssh/id_rsa
-                sudo chmod 600 /home/runner/.ssh/id_rsa
+                env
+                mkdir -p ~/.ssh
+                echo "${{ secrets.ARTIFACT_SSH_KEY }}" > ~/.ssh/id_rsa
+                chmod 600 ~/.ssh/id_rsa
+                ssh-keyscan -p 22 ${{ secrets.ARTIFACT_HOST }} >> ~/.ssh/known_hosts
+                sudo apt-get install sshpass
       - name: Git config
         run: |
                 git config --global user.email "raulcapillas@gmail.com"
