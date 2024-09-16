@@ -31,11 +31,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./public
+      - name: Use SSH key
+        run: |
+                mkdir -p ~/.ssh/
+                echo "${{secrets.ACTIONS_DEPLOY_KEY}}" > ~/.ssh/id_rsa
+                sudo chmod 600 ~/.ssh/id_rsa
+      - name: Git config
+        run: |
+                git config --global user.email "raulcapillas@gmail.com"
+                git config --global user.name "raulcapillas"
       - name: Install
         run: npm install
       - name: Build
